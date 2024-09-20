@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "util": "^0.12.5"
+  },
+  "devDependencies": {
+    "@vitest/browser": "^2.1.1",
+    "playwright": "^1.47.1",
+    "vitest": "^2.1.1"
+  },
+  "private": true,
+  "scripts": {
+    "test": "npm run test:node && npm run test:browser",
+    "test:browser": "vitest run --config=vitest.config.browser.ts",
+    "test:node": "vitest run --config=vitest.config.node.ts",
+    "pretest:browser": "npx playwright install chromium"
+  }
+}
